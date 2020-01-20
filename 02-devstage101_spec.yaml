@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app_staging: dev
+  name: devstage101
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app_staging: dev
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app_staging: dev
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
