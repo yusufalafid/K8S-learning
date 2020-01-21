@@ -1,0 +1,4 @@
+NAME        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
+pv1         1Gi        ROX            Retain           Available                                   3m38s
+app-files   2Gi        ROX            Retain           Available                                   3d21h
+pv2         3Gi        ROX            Retain           Available                                   3m38s
