@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: non-persistene-pod
+  name: non-persistene-pod
+spec:
+  containers:
+  - image: redis
+    name: non-persistene-pod
+    resources: {}
+    volumeMounts:
+    - name: redis-control
+      mountPath: /mnt/redis
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  volumes:
+  - name: redis-control
+    emptyDir: {}
+status: {}
